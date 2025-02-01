@@ -1,0 +1,6 @@
+{
+  "prop1": "val1",
+  "akka": {
+    "loglevel": "DEBUG"
+  }
+}

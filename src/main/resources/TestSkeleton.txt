@@ -1,0 +1,27 @@
+package PKG_NAME_TODO
+
+import akka.actor.{Actor, ActorLogging, ActorSystem}
+import akka.testkit.{ImplicitSender, TestKit}
+import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
+
+class CLS_NAME_TODO extends TestKit(ActorSystem("BackoffSupervisorPattern")) with ImplicitSender with WordSpecLike with BeforeAndAfterAll{
+
+  override def afterAll(): Unit = TestKit.shutdownActorSystem(system)
+
+  import CLS_NAME_TODO._
+
+   "A CLS_NAME_TODO" should {
+        "execute this code" in {
+            assert(true)
+        }
+   }
+}
+
+
+object CLS_NAME_TODO{
+  class SimpleActor extends Actor with ActorLogging{
+    override def receive: Receive = {
+      case message => log.info(message.toString)
+    }
+  }
+}
